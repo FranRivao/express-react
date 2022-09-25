@@ -23,16 +23,14 @@ const ShowBlogs = () => {
     return(
         <div className='container'>
             <div className="row">
-                <div className="col ">
-                    <div className="d-flex justify-content-center">
-                        <Link to={`/create`} className="btn btn-primary my-2">Crear</Link>
-                    </div>
+                <div className="col">
+                    <h3 className='my-4 text-center'><strong>Blogs list</strong></h3>
                     <table className="table">
                         <thead className="table-primary">
                             <tr>
-                                <th>Title</th>
-                                <th>Content</th>
-                                <th>Action</th>
+                                <th>Título</th>
+                                <th>Contenido</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -41,8 +39,8 @@ const ShowBlogs = () => {
                                     <td>{ blog.title }</td>
                                     <td>{ blog.content }</td>
                                     <td>
-                                        <Link to={`/edit/${blog.id}`} className="btn btn-info">Editar</Link>
-                                        <button onClick={() => deleteBlog(blog.id)} className="btn btn-danger">Delete</button>
+                                        <Link to={`/edit/${blog.id}`} className="btn btn-info me-2"><i className="fas fa-edit"></i></Link>
+                                        <button onClick={() => deleteBlog(blog.id)} className="btn btn-danger"><i className="fas fa-trash"></i></button>
                                     </td>
                                 </tr>
                             ))}
